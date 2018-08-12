@@ -1,14 +1,20 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+  <ion-toolbar>
+    <ion-title text-center class="oleo-script">InstaBirl</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="showSendPhoto()">
+        <ion-icon name="camera"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="auto-scroll">
+  <ion-tabs>
+    <ion-tab tabIcon="home" [root]="photosTab"></ion-tab>
+    <ion-tab tabIcon="search"  [root]="profileTab"></ion-tab>
+    <ion-tab tabIcon="add-circle" class="add-tab-icon" [root]="profileTab"></ion-tab>
+    <ion-tab tabIcon="heart" [root]="profileTab"></ion-tab>
+    <ion-tab tabIcon="contact" [root]="profileTab"></ion-tab>
+  </ion-tabs>
 </ion-content>
